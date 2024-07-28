@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardMedia, Typography, Box } from '@mui/material';
-import Banner from './Banner';
+
 
 const CarList = () => {
   const [cars, setCars] = useState([]);
@@ -26,6 +26,7 @@ const CarList = () => {
    <Box sx={{ padding: 2 }}>
        
       <h1>Car List</h1>
+      
     <Box
     sx={{ 
       display: 'flex', 

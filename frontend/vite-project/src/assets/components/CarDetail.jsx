@@ -33,6 +33,7 @@ const CarDetail = () => {
   return (
     <Box sx={{ padding: '20px' }}>
       <Button variant="contained" onClick={() => navigate('/cars')}>Back to Car List</Button>
+      <Button variant="contained" onClick={() => navigate('/')}>Back to HomePage</Button>
       <Card sx={{ maxWidth: 600, marginTop: 2 }}>
         <CardMedia
           component="img"

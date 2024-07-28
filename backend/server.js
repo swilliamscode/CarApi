@@ -31,7 +31,7 @@ app.get("/cars", async (req, res) => {
     }
 });
 
-// Add this new endpoint to your server.js
+
 app.get("/car/:id", async (req, res) => {
     const carId = req.params.id;
     try {
