@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-import { Card, CardContent, CardMedia, Typography, Box } from '@mui/material';
-
+import { Link, useNavigate } from 'react-router-dom';
+import { Card, CardContent, CardMedia, Typography, Box, Button } from '@mui/material';
+import Footer from './Footer';
 
 const CarList = () => {
   const [cars, setCars] = useState([]);
- 
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchCars = async () => {
@@ -26,7 +26,7 @@ const CarList = () => {
    <Box sx={{ padding: 2 }}>
        
       <h1>Car List</h1>
-      
+      <Button variant="contained" onClick={() => navigate('/')}>Back to HomePage</Button>
     <Box
     sx={{ 
       display: 'flex', 
@@ -55,6 +55,7 @@ const CarList = () => {
         </Card>
       ))}
     </Box>
+    <Footer/>
   </Box>
   );
 };

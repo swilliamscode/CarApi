@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="horizontal-list">
         <ul className="list-group">
           <div className="line">
-            <li className="list-group-item2">© 2024 cars.com</li>
+            <li className="list-group-item2">© 2024 Scenic City Cars</li>
             <li className="list-group-item2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

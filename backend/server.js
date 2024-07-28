@@ -46,6 +46,8 @@ app.get("/car/:id", async (req, res) => {
 });
 
 
+
+
 app.delete("/car/:id", async (req, res) => {
     const carId = req.params.id;
     try {

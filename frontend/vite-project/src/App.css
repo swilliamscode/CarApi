@@ -99,7 +99,7 @@
 
 .footer-container {
   color: rgba(255, 255, 255, 0.877);
-  background-color: rgba(113, 106, 105, 0.445);
+  background-color: rgba(32, 51, 130, 0.993);
   padding-bottom: 3px;
 }
 
@@ -118,7 +118,7 @@
   cursor: pointer; 
 }
 .list-group-item2:hover {
-  color: rgba(123, 8, 190, 0.838) ;
+  color: black ;
   
 }
 
