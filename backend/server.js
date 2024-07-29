@@ -5,8 +5,9 @@ const Car = require("./models/carModel");
 const cors = require("cors");
 const app = express();
 
-app.use(cors()) 
+app.use(cors()); 
 app.use(bodyParser.json());
+app.use(express.json());
 
 mongoose.connect("mongodb+srv://swilliamsprsvr:Hanselpunch1212%23@learnmongodb.n6huciq.mongodb.net/?retryWrites=true&w=majority&appName=LearnMongoDB", 
 { useNewUrlParser: true, useUnifiedTopology: true }
@@ -51,6 +52,7 @@ app.get('/cars/make/:make', async (req, res) => {
         const cars = await Car.find({ make: make }); 
         res.status(200).json(cars);
     } catch (error) {
+        console.error("Error fetching cars by make", error);
         res.status(500).send(error);
     }
 });
