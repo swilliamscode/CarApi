@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardMedia, Typography, Box, Button } from '@mui/material';
 import Footer from './Footer';
+import CarsByMake from './CarsByMake';
+
 
 const CarList = () => {
   const [cars, setCars] = useState([]);
@@ -24,8 +26,9 @@ const CarList = () => {
   return (
     
    <Box sx={{ padding: 2 }}>
-       
+       <CarsByMake />
       <h1>Car List</h1>
+      
       <Button variant="contained" onClick={() => navigate('/')}>Back to HomePage</Button>
     <Box
     sx={{ 

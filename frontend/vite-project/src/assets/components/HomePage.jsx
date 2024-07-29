@@ -1,9 +1,9 @@
 
-
 import React, { useState } from 'react';
 import { Button } from '@mui/material';
 import CarList from './CarList';
 import NavBar from './NavBar'; 
+import CarsByMake from './CarsByMake';
 
 const HomePage = () => {
   const [showCarList, setShowCarList] = useState(false); // State to control car list visibility
@@ -17,6 +17,7 @@ const HomePage = () => {
       <img src="https://cdn.dealerwebsites.com/p/dealer/acct/1996/logo/final-scenic-city-logo.png.jpg"/>
       
       <NavBar/>
+      
       <div className="image-container" >
         <img
           className="homephoto"
@@ -32,6 +33,7 @@ const HomePage = () => {
       >
         View Inventory
       </Button>
+      
 </div>
       {/* Conditionally render the CarList component */}
       {showCarList && <CarList />}

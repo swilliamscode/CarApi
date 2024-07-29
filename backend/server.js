@@ -45,6 +45,15 @@ app.get("/car/:id", async (req, res) => {
     }
 });
 
+app.get('/cars/make/:make', async (req, res) => {
+    try {
+        const { make } = req.params;
+        const cars = await Car.find({ make: make }); 
+        res.status(200).json(cars);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
 
 
 
